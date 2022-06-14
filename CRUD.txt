@@ -1,9 +1,9 @@
 CRUD
 
-GET - /tasks -> Get all tasks
+OK - GET - /tasks -> Get all tasks
 GET - /tasksdone -> Get the tasks done
 GET - /tasksnotdone -> Get the tasks not done
-GET - /task/:id -> Get one specific task
+OK - GET - /task/:id -> Get one specific task
 PUT - /task/:id -> Update one specific task
 PUT - /taskdone/:id -> Make a specific task be done
 PUT - /tasknotdone/:id -> Make a specific taks be not done
