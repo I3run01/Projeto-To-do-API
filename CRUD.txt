@@ -5,8 +5,8 @@ OK - GET - /tasksdone -> Get the tasks done
 OK - GET - /tasksnotdone -> Get the tasks not done
 OK - GET - /task/:id -> Get one specific task
 OK - POST - /task -> Cretae one task
-PUT - /taskdone/:id -> Make a specific task be done
-PUT - /tasknotdone/:id -> Make a specific taks be not done
-PUT - /taskname/:id -> Change the name of task
-PUT - /taskresume/:id -> Change the resume of the task
+OK - PUT - /taskdone/:id -> Make a specific task be done
+OK - PUT - /tasknotdone/:id -> Make a specific taks be not done
+OK - PUT - /taskname/:id -> Change the name of task
+OK - PUT - /taskresume/:id -> Change the resume of the task
 DELETE - /task/:id

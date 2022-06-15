@@ -69,3 +69,42 @@ export const taskdone =async (req: Request, res: Response) => {
 
     res.json({message: `id: ${id} updated`})
 }
+
+export const tasknotdone =async (req: Request, res: Response) => {
+    let {id} = req.params
+
+    await Tasks.update({status: 'not done'}, {
+        where: {id: id}
+    })
+
+    res.json({message: `id: ${id} updated`})
+}
+
+export const taskname =async (req: Request, res: Response) => {
+    let {id} = req.params
+
+    let name = req.body.name
+
+    await Tasks.update({name: name}, {
+        where: {id: id}
+    })
+
+    res.json({message: `task name changed to ${name}`})
+}
+
+export const taskresume =async (req: Request, res: Response) => {
+    let {id} = req.params
+    let resume = req.body.resume
+
+    await Tasks.update({resume: resume}, {
+        where: {id: id}
+    })
+
+    res.json({message: `message chenged to ${resume}`})
+}
+
+export const task =async (req: Request, res: Response) => {
+    let {id} = req.params
+
+    await Tasks.destroy({id:id})
+}
