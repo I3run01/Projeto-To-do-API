@@ -8,6 +8,7 @@ router.get('/random', ApiController.random)
 router.get('/name/:name', ApiController.name)
 
 router.get('/tasks', ApiController.getAllTasks)
+router.get('/tasksdone', ApiController.tasksdone)
 
 router.get('/task/:id', ApiController.GetOneTask)
 

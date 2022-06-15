@@ -35,3 +35,11 @@ export const GetOneTask = async (req: Request, res: Response) => {
     else res.json({error: 'Not found'})
     
 }
+
+export const tasksdone =async (req: Request, res: Response) => {
+    let list = await Tasks.findAll({where: {resume: 'done'}})
+
+    console.log(list)
+
+    res.json({message:'it worked'})
+}
