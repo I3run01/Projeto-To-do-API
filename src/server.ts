@@ -22,7 +22,7 @@ server.use(apiRoutes)
 
 server.use((req: Request, res: Response) => {
     res.status(404);
-    res.json({error: 'Endpoint não encontrado.'});
+    res.json({error: 'Endpoint not founded.'});
 });
 
 server.listen(process.env.PORT);

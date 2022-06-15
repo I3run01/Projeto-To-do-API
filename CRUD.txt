@@ -1,10 +1,10 @@
 CRUD
 
 OK - GET - /tasks -> Get all tasks
-GET - /tasksdone -> Get the tasks done
-GET - /tasksnotdone -> Get the tasks not done
+OK - GET - /tasksdone -> Get the tasks done
+OK - GET - /tasksnotdone -> Get the tasks not done
 OK - GET - /task/:id -> Get one specific task
-PUT - /task/:id -> Update one specific task
+OK - POST - /task -> Cretae one task
 PUT - /taskdone/:id -> Make a specific task be done
 PUT - /tasknotdone/:id -> Make a specific taks be not done
 PUT - /taskname/:id -> Change the name of task

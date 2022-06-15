@@ -37,9 +37,35 @@ export const GetOneTask = async (req: Request, res: Response) => {
 }
 
 export const tasksdone =async (req: Request, res: Response) => {
-    let list = await Tasks.findAll({where: {resume: 'done'}})
+    let list = await Tasks.findAll({where: {status: 'done'}})
 
-    console.log(list)
+    res.json(list)
+}
 
-    res.json({message:'it worked'})
+export const tasksnotdone =async (req: Request, res: Response) => {
+    let list = await Tasks.findAll({where: {status: 'not done'}})
+
+    res.json(list)
+}
+
+export const postTask =async (req: Request, res: Response) => {
+    let name = req.body.name
+    let resume = req.body.resume
+
+    await Tasks.create({
+        name: name,
+        resume: resume
+    })
+
+    res.json({message: 'Task created'})
+}
+
+export const taskdone =async (req: Request, res: Response) => {
+    let {id} = req.params
+
+    await Tasks.update({status: 'done'}, {
+        where: {id: id}
+    })
+
+    res.json({message: `id: ${id} updated`})
 }
