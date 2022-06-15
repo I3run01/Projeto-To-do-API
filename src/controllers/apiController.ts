@@ -106,5 +106,7 @@ export const taskresume =async (req: Request, res: Response) => {
 export const task =async (req: Request, res: Response) => {
     let {id} = req.params
 
-    await Tasks.destroy({id:id})
+    await Tasks.destroy({where: {id:id}})
+
+    res.json({mesage: `id: ${id} destroyed`})
 }
